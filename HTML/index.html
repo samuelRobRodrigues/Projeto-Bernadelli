@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigues | Viagens</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fonts/fonts.css">
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="nome__empresa">Bernadelli Tour</h1>   
+    </header>
+    <!-- Botão -->
+    <button id="mostrarEsconder" onclick="toggleDiv()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+          </svg>
+    </button>
+
+    <!-- Div que será mostrada/oculta -->
+    <div id="menu__lateral">
+      <span id="fechar" onclick="fecharDiv()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+        </span>
+      <ul>
+        <li>Entrar</li>
+        <li>Passagens</li>
+        <li>Trabalhe conosco</li>
+        <li>Suporte</li>
+      </ul>
+    </div>
+    <nav>
+        <h1>Compre sua passagem</h1>
+        <div class="nave">
+            <div class="input1">
+                <button id="send"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                  </svg></button>
+                  <input type="text" placeholder="De onde você vai sair?">
+                </div>            
+        </div>
+        <div class="nave2">
+            <button id="location"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg></button>
+              <input type="text" placeholder="Pra onde você deseja ir?">
+        </div>    
+        </div>
+        <div id="checkbox">
+            <div id="checkbox1">
+                <input onclick="checkCb(this.id, this.checked)" type="checkbox" name="cb1" id="cb1"/>Somente Ida
+            </div>
+            <div id="checkbox2">
+                <input onclick="checkCb(this.id, this.checked)" type="checkbox" name="cb2" id="cb2"/>Ida e Volta
+            </div>
+        </div>
+        <div id="datas">
+            <div id="data1">
+                <input type="text" id="data" placeholder="Data de ida">
+            </div>
+            <div id="data2">
+                <input type="text" id="data" placeholder="Data de volta">
+            </div>
+        </div>
+        <div id="buscar">
+            <button onclick="buscar()">Buscar Viagem</button>
+        </div>
+    </nav>
+    <div class="ofertas">
+        <h1 id="passagens">Passagens de ônibus em oferta</h1>
+        <button id="acessar" onclick="acessarOfertas()">Acessar mais</button>
+    </div>
+    <main class="grid">
+        <div id="oferta0">
+            <img src="../css/img/riodejaneiro.jpg" alt="rio de janeiro" title="Rio de Janeiro">
+            <h2>Rio de Janeiro</h2>
+            <h3>São Paulo</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam iste provident voluptatibus vero tempore nisi aperiam consectetur, facere quidem adipisci soluta! Quos iste voluptatem eveniet distinctio eaque dolore a nam?</p>
+        </div>
+        <div id="oferta1">
+            <img src="../css/img/salvador.jpeg" alt="salvador" title="Salvador">
+            <h2>Salvador</h2>
+            <h3>São Paulo</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam iste provident voluptatibus vero tempore nisi aperiam consectetur, facere quidem adipisci soluta! Quos iste voluptatem eveniet distinctio eaque dolore a nam?</p>
+        </div>
+        <div id="oferta2">
+            <img src="../css/img/sc.jpg" alt="Balneario - SC" title="Balneario SC">
+            <h2>Balneário Camboriú</h2>
+            <h3>São Paulo</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam iste provident voluptatibus vero tempore nisi aperiam consectetur, facere quidem adipisci soluta! Quos iste voluptatem eveniet distinctio eaque dolore a nam?</p>
+        </div>
+        <div id="oferta3">
+            <img src="../css/img/df.jpeg" alt="Brasília - DF" title="Brasília DF">
+            <h2>Destrito Federal</h2>
+            <h3>São Paulo</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam iste provident voluptatibus vero tempore nisi aperiam consectetur, facere quidem adipisci soluta! Quos iste voluptatem eveniet distinctio eaque dolore a nam?</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <ul>
+            <a href="#"><li>oi</li></a>
+            <a href="#"><li>tudo</li></a>
+            <a href="#"><li>bem</li></a>
+            <a href="#"><li>olha</li></a>
+        </ul>
+    </footer>
+</body> 
+</html>

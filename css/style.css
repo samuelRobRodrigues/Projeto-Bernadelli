@@ -1,0 +1,594 @@
+@import url(footer.css);
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+@import url(footer.css);
+body {
+    max-width: 100%;
+    background-color: #f2eaea;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../css/img/praia.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -100px;
+    object-fit: cover;
+    
+}
+#mostrarEsconder svg{
+    height: 40px;
+    width: 40px;
+    color: black;
+}
+header {
+    font-family: 'bebas';
+    display: flex;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+#menu__lateral  {
+    transition: right 0.9s ease;
+    box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.234);
+    font-family: 'bebas';
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    color: black;
+
+}
+#menu__lateral ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Altura do underline */
+    background-color: #007BFF; /* Cor do underline */
+    transition: width 0.3s ease;
+}
+#menu__lateral ul li:hover::before {
+    width: 100%;
+}
+#menu__lateral ul {
+    text-align: center;
+    cursor: pointer;
+    list-style-type: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding-top: 4rem;
+    line-height: 4rem;
+    text-indent: 1em;
+
+}
+#menu__lateral ul li {
+    border: 0.1px solid #00000028; /* largura, estilo e cor da borda */
+}
+#menu__lateral ul li:hover {
+    text-decoration: underline;
+    transition: 0.1s;
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.201);
+}
+#mostrarEsconder {
+
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: #ffffffe6;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+#mostrarEsconder:hover {
+    transition: 0.2s;
+    transform: scale(1.02);
+}
+
+#fechar {
+    margin: 0;
+    padding-right: 10px;
+    padding-top: 2px;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+  }
+#fechar svg {
+    color: black;
+    height: 40px;
+    width: 40px;
+}
+#nome__empresa {
+    color: #fff;
+    font-family: 'bebas';
+    padding: 15px;
+    text-shadow: 2px 2px 5px rgba(1, 1, 1, 0.382);
+    transition: 0.3s;
+}
+#nome__empresa:hover {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.399);
+}
+#ajuda {
+    font-family: 'bebas';
+    font-size: 1.2rem;
+    border-radius: 15px;
+    background-color: rgba(43, 43, 43, 0.804);
+    height: 50px;
+    width: 90px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    padding: 5px;
+}
+#ajuda:hover {
+    background-color: rgba(0, 0, 0, 0.908);
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#entrar {
+    font-family: 'bebas';
+    font-size: 1.2rem;
+    border-radius: 15px;
+    background-color: rgba(43, 43, 43, 0.804);
+    height: 50px;
+    width: 90px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    padding: 5px;
+}
+#entrar:hover {
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.915);
+}
+nav {
+    width: 100%;
+    font-family: 'bebas';
+    font-size: 1.3rem;
+    color: rgb(88, 88, 88);
+    margin-left: 8rem;
+    padding-top: 20px;
+    overflow: hidden;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffffad;
+    border-radius: 5%;
+}
+
+.nave {
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.207);
+    font-family: 'bebas';
+    padding: 7px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nave input {
+    font-family: 'bebas';
+    outline: none;
+    background: transparent;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 250px;
+    padding-right: 30px;
+
+}
+#send {
+    font-family: 'bebas';
+    margin-left: 10px;
+    cursor: pointer;
+    color: rgb(0, 98, 255);
+
+}
+.nave2 {
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.207);
+    font-family: 'bebas';
+    padding: 7px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nave2 input {
+    font-family: 'bebas';
+    outline: none;
+    background: transparent;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 250px;
+    padding-right: 30px;
+}
+#location {
+    font-family: 'bebas';
+    margin-left: 10px;
+    cursor: pointer;
+    color: rgb(0, 98, 255);
+
+}
+#checkbox {
+    font-family: 'bebas';
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#checkbox1 {
+    font-family: 'bebas';
+    padding-right: 55px;
+}
+#buscar button {
+    font-family: 'bebas';
+    cursor: pointer;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 25px;
+    background-color: rgb(0, 98, 255);
+    border-radius: 25px;
+    font-size: 1.5rem;
+}
+#buscar button:hover {
+    transition: 0.2s;
+    transform: scale(1.01);    
+    box-shadow: 1px 1px 15px black;
+    background-color: rgb(13, 37, 77);
+    color: #fff;
+}
+#datas input{
+    font-family: 'bebas';
+    outline: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+
+}
+
+#datas {
+    font-family: 'bebas';
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    padding-left: 5rem;
+    font-size: 2rem;
+}
+.ofertas {
+    font-family: 'bebas';
+    margin-top: 70px;
+    justify-content: right;
+    margin-right: 1rem;
+    padding-top: 25px;
+    display: flex;
+    transition: 0.2s;
+}
+.ofertas h1 {
+    font-family: 'bebas';
+    font-size: 3rem;
+    color: rgb(17, 17, 17);
+    margin-left: 8rem;  
+}
+  
+.ofertas button {
+    margin-top: .5rem;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 98, 255);
+    font-family: 'bebas';
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px 5px black;
+    cursor: pointer;
+}
+.ofertas button:hover {
+    transition: 0.2s;
+    background-color: rgb(13, 37, 77);
+    color: #fff;
+    transform: scale(1.05);    
+    box-shadow: 1px 1px 15px black;
+
+}
+main p {
+    font-family: 'ubuntu';
+    font-weight: 400;
+    text-align: justify;
+    padding: 5px;
+    margin: 10px;
+}
+main {
+    max-width: 1368px;
+    row-gap: 10px;
+    column-gap: 10px;
+    max-width: 1368px;
+    font-family: 'ubuntu';
+    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+@media (min-width: 2100px){
+    .grid {
+        margin: 0 auto;
+    }
+    #nome__empresa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width:1025px) {
+    .container{
+        grid-template-columns: 1fr 1fr ;
+    }
+    #mostrarEsconder {
+        display: no}
+}
+@media (max-width: 1024px) {
+    main {
+        margin-left: 1rem;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+}
+  @media (max-width: 768px) {
+    #botoes {
+        display: none;
+    }
+    #nome__empresa {
+        max-width: 100%;
+    }
+    #passagens {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+   
+    .ofertas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-left: 1rem;
+    }
+    .ofertas > h1 {
+        text-align: center;
+
+    }
+    nav {
+        padding-top: 0;
+        margin-top: 1rem;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;  
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr; /* Adjust column layout for smaller screens */
+        row-gap: 10px;
+        column-gap: 10px;
+        transform: scale(0.9)
+    }
+}
+  @media (max-width: 685px) {
+    #mostrarEsconder{
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+    }
+    #mostrarEsconder svg {
+        height: 20px;
+        width: 20px;
+    }
+    #menu__lateral {
+        height: 100%;
+        width: 10rem;
+        
+    }
+    #nome__empresa {
+        max-width: 100%;
+    }
+    #passagens {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .ofertas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .ofertas > h1 {
+        margin: 0 auto;
+        align-items: center;
+    }
+    main {
+        align-items: center;
+        transition: 0.2s;
+        transform: scale(0.9);
+        margin: 0 auto;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+    nav {
+        padding-top: 0;
+        margin-top: 1rem;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 1em;
+    }}
+  @media (max-width: 535px) {
+    #passagens {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    #nome__empresa {
+        max-width: 100%;
+    }
+    .ofertas > h1 {
+        margin: 0 auto;
+    }
+    .ofertas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    nav {
+        padding-top: 0;
+        margin-top: 1rem;
+        margin-left: 0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        align-items: center;
+        transition: 0.2s;
+        transform: scale(0.9);
+        margin: 0 auto;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+  }
+  @media (max-width: 376px) {
+    main {
+        justify-content: center;
+    }
+    #nome__empresa {
+        max-width: 100%;
+    }
+    .ofertas > h1 {
+        margin: 0 auto;
+    }
+    .ofertas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 1em;
+        height: 250px;
+    }}
+#oferta0,
+#oferta1,
+#oferta2,
+#oferta3 {
+    font-family: 'ubuntu';
+    height: 400px;
+    width: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.43);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    transition: 0.15s;
+}
+
+#oferta0 {
+    align-items: center;
+    background-color: #fff;
+
+}
+#oferta0:hover {
+    transform: scale(1.03);
+}
+#oferta1:hover {
+    transform: scale(1.03);
+}
+#oferta2:hover {
+    transform: scale(1.03);
+}
+#oferta3:hover {
+    transform: scale(1.03);
+}
+#oferta1 {
+    background-color: #fff;
+}
+#oferta2 {
+    background-color: #fff;
+}
+#oferta3 {
+    background-color: #fff;
+}
+#oferta0 img {
+    object-fit: cover;
+    height: 200px;
+    object-position: center center;
+}
+#oferta1 img {
+    object-fit: cover;
+    height: 200px;
+    object-position: center center;
+}
+#oferta2 img {
+    object-fit: cover;
+    height: 200px;
+    object-position: center center;
+}
+#oferta3 img {
+    object-fit: cover;
+    height: 200px;
+    object-position: center center;
+}
+
+h2 {
+    font-family: 'oswald';  
+    padding: 0;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    transition: 0.2s;
+}
+
+h3 {
+    padding-top: 3rem;
+    font-size: 1.2rem;
+}

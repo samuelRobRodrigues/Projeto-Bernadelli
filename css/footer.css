@@ -1,0 +1,10 @@
+.footer {
+    width: 100%;
+    height: 140px;
+    background-color: #fbf7f7;
+    color: #fff;
+}
+.footer ul {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'bebas';
+    src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu/Ubuntu-Light.ttf);
+}
+@font-face {
+    font-family: 'oswald';
+    src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
